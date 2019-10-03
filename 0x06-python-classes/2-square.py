@@ -4,6 +4,7 @@ class Square:
     """
     __size = "size"
     def __init__(self, size=0):
+
         """TypeError: size must be an integer
         ValueError: size less than 0
         """
