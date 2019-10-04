@@ -1,0 +1,100 @@
+Integer addition
+======================
+
+Using ``addition``
+-------------------
+
+Function that adds 2 integer, recieves two values, checks if are numbers, cast them into ints and returns the result of the addition.
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Addition with ints:
+    >>> add_integer(6, 5)
+    11
+
+    >>> add_integer(-5, -2)
+    -7
+
+    >>> add_integer(-6, 5)
+    -1
+
+    >>> add_integer(8, -5)
+    3
+
+    >>> add_integer(4)
+    102
+
+Addition with strings as arguments:
+    >>> add_integer("hello", 5)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+    >>> add_integer(-5, "hello")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+    >>> add_integer("hello")
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+    >>> add_integer("hello", None)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+    
+
+With floats:
+    >>> add_integer(5.2, 7)
+    12
+
+    >>> add_integer(5.2, 5.2)
+    10
+
+    >>> add_integer(5.2, -5.4)
+    0
+
+    >>> add_integer(2.5)
+    100
+
+    >>> add_integer(-4, 6.2 )
+    2
+
+    >>> add_integer(4, -6.2)
+    -2
+
+    >>> add_integer(-2.5, -2.5)
+    -4
+
+No arguments:
+    >>> add_integer()
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+    >>> add_integer(7, None)
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+    >>> add_integer(None, 7)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+
+
+
+
+
+
+
+
+
