@@ -6,8 +6,8 @@ class Rectangle:
            @width: Width of the rectangle
            @height: height of the rectangle
         """
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
@@ -47,8 +47,7 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """Calculates and returns the rectangle area
-        """
+        # Calculates and returns the rectangle area
         return self.__width * self.__height
 
     def perimeter(self):
@@ -72,12 +71,7 @@ class Rectangle:
         return string
 
     def __repr__(self):
-        
-
-
-
-
-
-
-
-
+        """Return a string representation of the rectangle
+           new instance using eval()
+        """
+        return ("Rectangle({:d}, {:d}".format(self.__width, self.__height))
