@@ -5,4 +5,3 @@ class MyInt(int):
 
     def __ne__(self, other):
         return (int(self) == int(other))
-
