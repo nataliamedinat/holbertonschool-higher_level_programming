@@ -83,39 +83,26 @@ class Rectangle(Base):
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                 self.__x, self.__y, self.__width, self.__height))
 
+    def __update(self, id=None, width=None, height=None, x=None, y=None):
+        """ Internal Method that assigns an argument to each attribute"""
+        if id is not None:
+            self.id = id
+
+        if width is not None:
+            self.width = width
+
+        if height is not None:
+            self.height = height
+
+        if x is not None:
+            self.x = x
+
+        if y is not None:
+            self.y = y
+
     def update(self, *args, **kwargs):
-        """Method that assigns argument to each attribute
-        """
-
-        for possition, arg in enumerate(args):
-            if possition == 0:
-                self.id = arg
-
-            elif possition == 1:
-                self.__width = arg
-
-            elif possition == 2:
-                self.__height = arg
-
-            elif possition == 3:
-                self.__x = arg
-
-            elif possition == 4:
-                self.__y = arg
-
-        if not args:
-            for keys, values in kwargs.items():
-                if keys == "id":
-                    self.id = values
-
-                if keys == "width":
-                    self.__width = values
-
-                if keys == "heigth":
-                    self.__heigth = values
-
-                if keys == "x":
-                    self.__x = values
-
-                if keys == "y":
-                    self.__y = values
+        """Assigns arguments to each attribute no-keyword and keyword"""
+        if args:
+            self.__update(*args)
+        elif kwargs:
+            self.__update(**kwargs)
