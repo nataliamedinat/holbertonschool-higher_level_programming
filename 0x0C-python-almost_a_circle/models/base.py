@@ -43,8 +43,18 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """Returns an instance with all attributes already set"""
-        new_instance = cls(1, 1)
-        if new_instance is not None:
-            new_instance.update(**dictionary)
+        """Returns an instance with all attributes already set
+           Args:
+          @cls: Current class
+          @dictionary: Like a double pointer to a dictionary
+        """
+        if cls.__name__ == "Rectangle":
+            new_instance = cls(1, 1, 0, 0)
+        elif cls.__name__ == "Square"
+            new_instance = cls(1, 0, 0)
+        new_instance.update(**dictionary)
         return new_instance
+
+    def load_from_file(cls):
+        """ Return a list of instances """
+        
