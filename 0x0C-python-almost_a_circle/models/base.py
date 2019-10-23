@@ -27,6 +27,7 @@ class Base:
         else:
             return json.dumps(list_dictionaries)
 
+    @classmethod
     def save_to_file(cls, list_objs):
         """ Method that writes the json string representation
             of list_objs to a file.
@@ -39,3 +40,11 @@ class Base:
             return []
         else:
             return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """Returns an instance with all attributes already set"""
+        new_instance = cls(1, 1)
+        if new_instance is not None:
+            new_instance.update(**dictionary)
+        return new_instance
