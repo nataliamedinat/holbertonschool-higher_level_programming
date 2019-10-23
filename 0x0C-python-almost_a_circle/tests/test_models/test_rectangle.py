@@ -347,8 +347,3 @@ class TestRectangle(unittest.TestCase):
         expected_dict = {'x': 10, 'y': 10, 'id': 10, 'height': 10, 'width': 10}
         self.assertEqual(r1_dictionary, expected_dict)
         self.assertEqual(r1.__str__(), "[Rectangle] (10) 10/10 - 10/10")
-
-
-if __name__ == '__main__':
-    unittest.main()
-
