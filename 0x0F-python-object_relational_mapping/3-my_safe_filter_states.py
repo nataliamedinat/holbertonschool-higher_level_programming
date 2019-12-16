@@ -19,6 +19,6 @@ if __name__ == "__main__":
     for row in res:
         print(row)
 
-    # Clean up
+    # Clean up cur and data
     cur.close()
     db.close()
