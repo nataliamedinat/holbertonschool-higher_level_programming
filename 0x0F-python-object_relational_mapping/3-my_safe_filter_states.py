@@ -11,7 +11,8 @@ if __name__ == "__main__":
     # Executing queries
     cur = db.cursor()
     cur.execute("SELECT * FROM states\
-                ORDER BY states.id ASC", (sys.argv[4]))
+               WHERE NAME = %s\
+               ORDER BY states.id ASC", (sys.argv[4]))
 
     # To obtain results
     res = cur.fetchall()
