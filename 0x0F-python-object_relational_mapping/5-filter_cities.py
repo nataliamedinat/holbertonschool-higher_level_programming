@@ -15,12 +15,10 @@ if __name__ == "__main__":
     WHERE states.name = %s\
     ORDER BY cities.id ASC", (argv[4], ))
 
-    # To obtain results
-    cities = ''
-    res = cur.fetchall()
-    for row in res:
-        cities.append(row[1])
-        print(", ".join(cities))
+    c = []
+    for row in cur.fetchall():
+        c.append(row[1])
+    print(", ".join(c))
 
     # Clean up
     cur.close()
