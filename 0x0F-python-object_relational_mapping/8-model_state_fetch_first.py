@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-""" Class that gets the content of the table """
+""" this class gets the content of a table """
 import sys
 from model_state import Base, State
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import Session
-
 
 if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
@@ -15,7 +14,7 @@ if __name__ == "__main__":
     session = Session(engine)
     first_state = session.query(State).filter_by(id='1').first()
     if first_state:
-        print("{}: {}".fomrat(first_state.id, first_state.name))
+        print("{}: {}".format(first_state.id, first_state.name))
     else:
         print("Nothing")
     session.close()
