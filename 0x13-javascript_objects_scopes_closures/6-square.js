@@ -11,7 +11,9 @@ module.exports = class Square extends Rectangle {
     if (c === undefined) {
       this.print();
     } else {
-      for (let trav = 0; trav < this.width; trav++) { console.log(c.repeat(this.height)); }
+      for (let trav = 0; trav < this.width; trav++) {
+        console.log(c.repeat(this.height));
+      }
     }
   }
 };
